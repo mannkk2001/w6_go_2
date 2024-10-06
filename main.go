@@ -34,13 +34,11 @@ var task Task
     tasks := Task{
         ID:          nextID,                   
         Title:       "Books Collection",        
-        Description: "Add Book to the Collection",        
+        Description: "Add Book to the Collection", 
+        Status:     status,       
             
     }
-	// Status:     input.status, 
-	//if task.Status == "" {
-       // task.Status = "pending"
-	//}
+	 
 
     if task.ID == 0 {
         task.ID = nextID
@@ -52,7 +50,7 @@ var task Task
         task.Status = "pending"
     }
 
-    tasks = append(tasks, task) 
+  tasks = append(tasks, task)
 
 
     w.Header().Set("Content-Type", "application/json") 
